@@ -21,12 +21,27 @@ export const Flex = styled("div", {
   alignItems: "center",
 });
 
+export const Box = styled("div", {
+  maxWidth: "100%",
+});
+
 export const colors = {
   color: {
     brand1: {
       color: "$brand1",
     },
-
+    brand2: {
+      color: "$brand2",
+    },
+    brand3: {
+      color: "$brand3",
+    },
+    brand5: {
+      color: "$brand5",
+    },
+    brand7: {
+      color: "$brand5",
+    },
     grey1: {
       color: "$grey1",
     },
@@ -84,6 +99,10 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       grey4: "#F8F9FA",
       grey5: "#F8F9FA",
 
+      socialInstagram: "#CF50AC",
+      socialFacebook: "#506CCF",
+      socialLinkedin: "#0E76A8",
+
       whiteFixed: "#ffffff",
       mode: "#ffffff",
     },
@@ -96,6 +115,9 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       2: "1rem",
       3: "2rem",
       4: "3rem",
+      5: "4rem",
+      section: "10rem",
+      sectionMobile: "4rem"
     },
     fonts: {
       titles: '"Lexend", sans-serif;',

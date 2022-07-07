@@ -6,6 +6,7 @@ import { Button } from "@/styles/Buttons";
 // Components
 import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
+import { Contacts } from "@/components/Contacts"
 
 // Data
 import { stackData } from "@/utils/stackData";
@@ -40,7 +41,7 @@ export const Home = (): JSX.Element => {
                 width={"48px"}
                 height={"48px"}
               />
-              <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
+              <Text color="grey4" css={{marginLeft: "$2"}}>Hello, my name is {userData.nameUser}</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
               I love creating and developing projects
@@ -73,7 +74,10 @@ export const Home = (): JSX.Element => {
                 My projects
               </Text>
               <Text as="p" type="body1" color="grey2">
-                Projects created at Kenzie Academy
+                Projects created at {" "}
+                <Text as="span" color="brand5">
+                  Kenzie Academy
+                </Text>
               </Text>
             </ProjectsAreaSocialMediaMessage>
             <ProjectsAreaContent>
@@ -82,6 +86,7 @@ export const Home = (): JSX.Element => {
           </ProjectAreaWrapperColumns>
         </Container>
       </ProjectsArea>
+      <Contacts />
     </main>
   );
 };

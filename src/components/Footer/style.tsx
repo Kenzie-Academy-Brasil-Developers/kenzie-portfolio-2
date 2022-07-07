@@ -1,18 +1,30 @@
-import { styled } from "@stitches/react";
-import { Button } from '@/styles/Buttons';
-import { Container } from '@/styles/Global'
+import { styled } from "@/styles/stitches.config";
+import { Container, Flex } from '@/styles/Global'
+import dots from "@/public/static/img/background/dots.svg";
 
 export const Footer = styled("footer", {
-    backgroundColor: "$brand1",
-    padding: "2rem 0 3rem 0",
+    backgroundColor: "$grey0",
+    padding: "7rem 0",
+    backgroundImage: `url(${dots})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "left top 8rem",
+    "@mobile": {
+        backgroundPosition: "center top 1rem",
+    },
     [`& ${Container}`]:{
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
-        textAlign: "center"
+        "@mobile": {
+            flexDirection: "column",
+            [`& ${Flex}:first-child`]: {
+                marginBottom: "$5",
+                flexDirection: "column",
+                textAlign: "center",
+                [`& img`]: {
+                    marginBottom: "$2",
+                }
+            }
+        }
     },
-    [`& ${Button}`]:{
-        transform: "translateY(-124%)"
-    }
 })

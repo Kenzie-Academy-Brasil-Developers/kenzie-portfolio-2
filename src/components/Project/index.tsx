@@ -1,5 +1,6 @@
 import {
   Project as ProjectWrapper,
+  ProjectTitle,
   ProjectStack,
   ProjectStackTech,
   ProjectLink,
@@ -39,14 +40,14 @@ export const Project = (): JSX.Element => {
     <>
       {repositories?.map((repository) => (
         <ProjectWrapper key={repository.id}>
-          <Text
+          <ProjectTitle
             as="h2"
             type="heading3"
             css={{ marginBottom: "$3" }}
             color="grey4"
           >
             {repository.name}
-          </Text>
+          </ProjectTitle>
 
           <ProjectStack>
             <Text type="body2" color="grey2">

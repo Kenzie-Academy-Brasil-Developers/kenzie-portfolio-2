@@ -3,6 +3,7 @@ import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
 
 import img from "@/public/static/img/background/header-bg.svg";
+import dots from "@/public/static/img/background/dots.svg";
 
 export const Header = styled("header", {
   backgroundColor: "$grey1",
@@ -34,24 +35,20 @@ export const HeaderContent = styled("div", {
 export const HeaderButtonsArea = styled(Flex, {
   marginTop: "$2",
   [`& ${Button}`]: {
-    marginRight: "$2"
+    marginRight: "$2",
   },
-  "@mobile": {
-  
-  },
+  "@mobile": {},
 });
 
 export const UserImage = styled("img", {
-  width: "3rem",
-  height: "3rem",
   borderRadius: "50%",
   "@mobile": {
     width: "2.25rem",
     height: "2.25rem",
-  }
+  },
 });
 
-export const StackSection = styled("section", {
+export const StackSection = styled("div", {
   backgroundColor: "$grey4",
   padding: "4rem 0 2rem 0",
 });
@@ -73,8 +70,15 @@ export const StackCards = styled("div", {
 });
 
 export const ProjectsArea = styled("section", {
-  padding: "4rem 0 8rem 0",
-  backgroundColor: "$grey0"
+  padding: "$section 0",
+  backgroundColor: "$grey0",
+  backgroundImage: `url(${dots})`,
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "left top 11rem",
+  "@mobile": {
+    backgroundPosition: "right top 8rem",
+    padding: "$sectionMobile 0",
+  },
 });
 
 export const ProjectsAreaSocialMediaMessage = styled("div", {
