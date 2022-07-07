@@ -19,7 +19,6 @@ import {
   HeaderContent,
   HeaderButtonsArea,
   UserImage,
-  StackSection,
   StackCards,
   ProjectsArea,
   ProjectsAreaSocialMediaMessage,
@@ -70,34 +69,14 @@ export const Home = (): JSX.Element => {
         <Container>
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage>
-              <Text as="h2" type="heading4" color="grey1">
-                Vamos trocar uma ideia?
+              <Text as="h2" type="heading4" color="grey4">
+                My projects
               </Text>
               <Text as="p" type="body1" color="grey2">
-                No linkedIn sempre estou compartilhando meus processos diários
-                para desenvolver esses projetos e estou disposto a trocar
-                algumas ideias por lá
+                Projects created at Kenzie Academy
               </Text>
-              <Button
-                type="primary"
-                target="_blank"
-                as="a"
-                href={`https://www.linkedin.com/in/${userData.linkedinUser}`}
-              >
-                Acessar perfil no LinkedIn
-              </Button>
             </ProjectsAreaSocialMediaMessage>
             <ProjectsAreaContent>
-              <Text type="body1" color="grey2" css={{ marginBottom: "$2" }}>
-                Projetos
-              </Text>
-              <Text as="h3" type="heading2" color="grey1">
-                Originalidade e{" "}
-                <Text as="span" color="brand1" type="heading2">
-                  dedicação
-                </Text>{" "}
-                em cada detalhe
-              </Text>
               <Project />
             </ProjectsAreaContent>
           </ProjectAreaWrapperColumns>

@@ -9,12 +9,16 @@ export const Container = styled("div", {
   maxWidth: "$container",
   margin: "0 auto",
   padding: "0 1rem",
+
+  "@tablet": {
+    maxWidth: "$containerTablet",
+  },
 });
 
 export const Flex = styled("div", {
   display: "flex",
   gap: "$1",
-  alignItems: "center"
+  alignItems: "center",
 });
 
 export const colors = {
@@ -85,6 +89,7 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
     },
     sizes: {
       container: "75rem",
+      containerTablet: "40rem",
     },
     space: {
       1: "0.5rem",
