@@ -12,6 +12,7 @@ export const Header = styled("header", {
   backgroundRepeat: "no-repeat",
   backgroundPosition: "right",
   backgroundAttachment: "fixed",
+  borderBottom: "2px solid $grey5",
   "@tablet": {
     backgroundPosition: "right -30% center",
   },
