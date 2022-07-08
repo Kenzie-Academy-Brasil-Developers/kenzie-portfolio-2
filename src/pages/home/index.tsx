@@ -62,10 +62,15 @@ export const Home = (): JSX.Element => {
               my projects and technologies
             </Text>
             <HeaderButtonsArea>
-              <Button as="a" type="primary" href="#projetos">
+              <Button as="a" type="primary" href="#projects">
                 See Projects
               </Button>
-              <Button as="a" href="#tecnologias" type="circle">
+              <Button
+                as="a"
+                type="circle"
+                target="_blank"
+                href={userData.githubUser}
+              >
                 <FaGithub />
               </Button>
             </HeaderButtonsArea>
@@ -97,7 +102,7 @@ export const Home = (): JSX.Element => {
           </ProjectAreaWrapperColumns>
         </Container>
       </ProjectsArea>
-      <Contacts/>
+      <Contacts />
     </main>
   );
 };

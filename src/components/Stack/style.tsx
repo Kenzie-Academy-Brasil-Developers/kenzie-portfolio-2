@@ -2,7 +2,7 @@ import { styled } from "../../styles/stitches.config";
 import { keyframes } from "@stitches/react";
 import { Text } from "../../styles/Text";
 
-const scaleUp = keyframes({
+export const scaleUp = keyframes({
   "0%": { transform: "translateY(15%)" },
   "100%": { transform: "translateY(-140%)" },
 });

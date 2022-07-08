@@ -120,7 +120,7 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       sectionMobile: "4rem"
     },
     fonts: {
-      titles: '"Lexend", sans-serif;',
+      titles: '"IBM Plex Sans", sans-serif;',
       texts: '"Inter", sans-serif',
     },
     fontSizes: {

@@ -28,19 +28,19 @@ export const Text = styled("p", {
             heading2: {
                 fontSize: "$title2",
                 lineHeight: "$title2",
-                fontWeight: 600,
+                fontWeight: 700,
                 ...headingsDefaultConfig
             },
             heading3: {
                 fontSize: "$title3",
                 lineHeight: "$title3",
-                fontWeight: 500,
+                fontWeight: 700,
                 ...headingsDefaultConfig
             },
             heading4: {
                 fontSize: "$title4",
                 lineHeight: "$title4",
-                fontWeight: 500,
+                fontWeight: 700,
                 ...headingsDefaultConfig
             },
             body1: {
