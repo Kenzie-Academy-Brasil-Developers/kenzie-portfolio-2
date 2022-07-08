@@ -1,6 +1,7 @@
 import { styled } from "@/styles/stitches.config";
 import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
+import { css } from "@stitches/react"
 
 import img from "@/public/static/img/background/header-bg.svg";
 import dots from "@/public/static/img/background/dots.svg";
@@ -98,7 +99,7 @@ export const ProjectsAreaSocialMediaMessage = styled("div", {
 export const ProjectsAreaContent = styled("div", {
   width: "100%",
   display: "grid",
-  gridTemplateColumns: "1fr 1fr",
+  gridTemplateColumns: "repeat(2, 1fr)",
   gridGap: "4rem",
   "@mobile": {
     gridTemplateColumns: "1fr",

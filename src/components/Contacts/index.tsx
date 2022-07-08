@@ -1,6 +1,8 @@
 import { Button } from "@/styles/Buttons";
 import { Container, Flex, Box } from "@/styles/Global";
 import { Text } from "@/styles/Text";
+import { motion, useElementScroll, useViewportScroll } from "framer-motion";
+
 import {
   ContactSection,
   ContactSectionContent,
@@ -12,25 +14,36 @@ import {
 } from "./style";
 
 import { FaWhatsapp, FaEnvelopeOpen, FaLinkedin } from "react-icons/fa";
+import { useRef } from "react";
 
 export const Contacts = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useViewportScroll();
+
   return (
-    <ContactSection>
+    <ContactSection id="contact">
       <Container>
-        <ContactSectionContent>
-          <ContactSectionText>
-            <Text type="heading2" color="grey4">
-              Let's set up a conversation and <Text as="span" type="heading2" color="brand1">develop our creativity</Text> together?
-            </Text>
-            <Text color="grey2" type="body1">
-              Advertise your brand organically within Dribbble’s design
-              inspiration feed.
-            </Text>
-          </ContactSectionText>
+        <ContactSectionContent ref={ref}>
+          <motion.div style={{ opacity: scrollYProgress }}>
+            <ContactSectionText>
+              <Text type="heading2" color="grey4">
+                Let's set up a conversation and{" "}
+                <Text as="span" type="heading2" color="brand1">
+                  develop our creativity
+                </Text>{" "}
+                together?
+              </Text>
+              <Text color="grey2" type="body1">
+                Advertise your brand organically within Dribbble’s design
+                inspiration feed.
+              </Text>
+            </ContactSectionText>
+          </motion.div>
           <ContactsCards>
             <ContactCard>
               <ContactCardImage className="wpp">
-                <FaWhatsapp color="#fff" size={24}/>
+                <FaWhatsapp color="#fff" size={24} />
               </ContactCardImage>
               <ContactCardContent>
                 <Text type="heading4" color="grey4">
@@ -45,9 +58,10 @@ export const Contacts = () => {
                 </Text>
               </ContactCardContent>
             </ContactCard>
+
             <ContactCard>
               <ContactCardImage className="email">
-                <FaEnvelopeOpen color="#fff" size={24}/>
+                <FaEnvelopeOpen color="#fff" size={24} />
               </ContactCardImage>
               <ContactCardContent>
                 <Text type="heading4" color="grey4">
@@ -63,7 +77,7 @@ export const Contacts = () => {
             </ContactCard>
             <ContactCard>
               <ContactCardImage className="linkedin">
-                <FaLinkedin color="#fff" size={24}/>
+                <FaLinkedin color="#fff" size={24} />
               </ContactCardImage>
               <ContactCardContent>
                 <Text type="heading4" color="grey4">

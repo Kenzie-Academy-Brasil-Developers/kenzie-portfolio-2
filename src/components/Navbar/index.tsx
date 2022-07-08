@@ -59,39 +59,35 @@ export const NavLinks = (): JSX.Element => {
     <NavbarLinks>
       <Button
         type="btLink"
-        target="_blank"
         as="a"
         color="grey4"
-        href={`https://github.com/${userData.githubUser}`}
+        href={`#home`}
       >
         Home
       </Button>
       <Button
         type="btLink"
-        target="_blank"
         as="a"
         color="grey4"
-        href={`https://github.com/${userData.githubUser}`}
+        href={`#projects`}
       >
         Projects
       </Button>
       <Button
         type="btLink"
-        target="_blank"
         as="a"
         color="grey4"
-        href={`https://github.com/${userData.githubUser}`}
+        href={`#contact`}
       >
         Contact
       </Button>
       <Button
         type="btLink"
-        target="_blank"
         as="a"
         color="grey4"
-        href={`https://github.com/${userData.githubUser}`}
+        href={`#social-media`}
       >
-        Social Medias
+        Social Media
       </Button>
  
     </NavbarLinks>

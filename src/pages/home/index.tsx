@@ -6,7 +6,7 @@ import { Button } from "@/styles/Buttons";
 // Components
 import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
-import { Contacts } from "@/components/Contacts"
+import { Contacts } from "@/components/Contacts";
 
 // Data
 import { stackData } from "@/utils/stackData";
@@ -23,13 +23,14 @@ import {
   StackCards,
   ProjectsArea,
   ProjectsAreaSocialMediaMessage,
-  ProjectsAreaContent,
   ProjectAreaWrapperColumns,
+  ProjectsAreaContent,
 } from "./style";
+import { HandEffect } from "@/components/HandEffect";
 
 export const Home = (): JSX.Element => {
   return (
-    <main>
+    <main id="home">
       <Header>
         <Container>
           <HeaderContent>
@@ -41,10 +42,20 @@ export const Home = (): JSX.Element => {
                 width={"48px"}
                 height={"48px"}
               />
-              <Text color="grey4" css={{marginLeft: "$2"}}>Hello, my name is {userData.nameUser}</Text>
+              <Text color="grey4" css={{ marginLeft: "$2" }}>
+                Hello, my name is {userData.nameUser} <HandEffect />
+              </Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-              I love creating and developing projects
+              I{" "}
+              <Text as="span" type="heading1" color="brand1">
+                love
+              </Text>{" "}
+              creating and{" "}
+              <Text as="span" type="heading1" color="brand1">
+                developing
+              </Text>{" "}
+              projects
             </Text>
             <Text type="body1" color="grey2">
               Discover here in this environment, created especially for you, all
@@ -66,7 +77,7 @@ export const Home = (): JSX.Element => {
           </HeaderContent>
         </Container>
       </Header>
-      <ProjectsArea id="projetos">
+      <ProjectsArea id="projects">
         <Container>
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage>
@@ -74,7 +85,7 @@ export const Home = (): JSX.Element => {
                 My projects
               </Text>
               <Text as="p" type="body1" color="grey2">
-                Projects created at {" "}
+                Projects created at{" "}
                 <Text as="span" color="brand5">
                   Kenzie Academy
                 </Text>
@@ -86,7 +97,7 @@ export const Home = (): JSX.Element => {
           </ProjectAreaWrapperColumns>
         </Container>
       </ProjectsArea>
-      <Contacts />
+      <Contacts/>
     </main>
   );
 };
