@@ -30,13 +30,13 @@ export const Footer = (): JSX.Element => {
           </Box>
         </Flex>
         <Flex>
-          <Button className="instagram" type="circle" as="a" href="">
+          <Button className="instagram" type="circle" as="a" target="_blank" href={`https://instagram.com/${userData.instagramUser}`}>
             <FaInstagram />
           </Button>
-          <Button className="facebook" type="circle" as="a" href="">
+          <Button className="facebook" type="circle" as="a" target="_blank" href={`https://fb.com/${userData.facebookUser}`}>
             <FaFacebookF />
           </Button>
-          <Button className="linkedin" type="circle" as="a" href="">
+          <Button className="linkedin" type="circle" as="a" target="_blank" href={`https://linkedin.com/in/${userData.linkedinUser}`}>
             <FaLinkedinIn />
           </Button>
         </Flex>
