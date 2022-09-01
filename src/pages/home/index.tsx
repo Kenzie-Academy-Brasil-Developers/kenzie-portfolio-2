@@ -26,9 +26,11 @@ import {
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
 } from "./style";
-import { HandEffect } from "@/components/HandEffect";
 
 export const Home = (): JSX.Element => {
+  const gihubUrl = `https://github.com/${userData.githubUser}`;
+  const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
+
   return (
     <main id="home">
       <Header>
@@ -42,12 +44,10 @@ export const Home = (): JSX.Element => {
                 width={"48px"}
                 height={"48px"}
               />
-              <Text color="grey4" css={{ marginLeft: "$2" }}>
-                Hello, my name is {userData.nameUser} <HandEffect />
-              </Text>
+              <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-              I{" "}
+            I{" "}
               <Text as="span" type="heading1" color="brand1">
                 love
               </Text>{" "}
@@ -65,11 +65,16 @@ export const Home = (): JSX.Element => {
               <Button as="a" type="primary" href="#projects">
                 See Projects
               </Button>
+              <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
+                See my portfolio source code
+              </Button>
               <Button
+                color="grey5"
                 as="a"
+                css={{ "&:hover": { color: "$grey1" } }}
                 type="circle"
                 target="_blank"
-                href={userData.githubUser}
+                href={gihubUrl}
               >
                 <FaGithub />
               </Button>
@@ -90,9 +95,9 @@ export const Home = (): JSX.Element => {
                 My projects
               </Text>
               <Text as="p" type="body1" color="grey2">
-                Projects created at{" "}
+                Some of my{" "}
                 <Text as="span" color="brand5">
-                  Kenzie Academy
+                  side projects
                 </Text>
               </Text>
             </ProjectsAreaSocialMediaMessage>

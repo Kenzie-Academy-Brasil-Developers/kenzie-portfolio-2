@@ -1,6 +1,6 @@
 import { Container } from "@/styles/Global";
 import { Text } from "@/styles/Text";
-import { motion, useViewportScroll } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 import {
   ContactSection,
@@ -19,24 +19,23 @@ import { userData } from "@/utils/userData";
 export const Contacts = () => {
   const ref = useRef(null);
 
+  const linkedInUrl = `https://www.linkedin.com/in/${userData.linkedinUser}`;
+
   const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [0.1, 0.9]);
 
   return (
     <ContactSection id="contact">
       <Container>
         <ContactSectionContent ref={ref}>
-          <motion.div style={{ opacity: scrollYProgress }}>
+          <motion.div style={{ scale }}>
             <ContactSectionText>
               <Text type="heading2" color="grey4">
-                Let's set up a conversation and{" "}
+                Let's talk and{" "}
                 <Text as="span" type="heading2" color="brand1">
-                  develop our creativity
-                </Text>{" "}
-                together?
-              </Text>
-              <Text color="grey2" type="body1">
-                Advertise your brand organically within Dribbble’s design
-                inspiration feed.
+                  develop solutions for your company
+                </Text>
+                , together!
               </Text>
             </ContactSectionText>
           </motion.div>
@@ -76,14 +75,18 @@ export const Contacts = () => {
                 <Text color="grey2" type="body2">
                   Send me an email reporting feedbacks, suggestions and ideas
                 </Text>
+
                 <Text
                   as="a"
                   color="grey2"
                   type="body2"
                   target="_blank"
                   href={`mailto=${userData.emailUser}`}
+                  onClick={() =>
+                    (window.location.href = "mailto:nekelpatrick.com")
+                  }
                 >
-                  Send email now
+                  Send me an email
                 </Text>
               </ContactCardContent>
             </ContactCard>
@@ -104,9 +107,9 @@ export const Contacts = () => {
                   color="grey2"
                   type="body2"
                   target="_blank"
-                  href={userData.linkedinUser}
+                  href={linkedInUrl}
                 >
-                  Go to Telegram Now
+                  Go to LinkedIn now
                 </Text>
               </ContactCardContent>
             </ContactCard>

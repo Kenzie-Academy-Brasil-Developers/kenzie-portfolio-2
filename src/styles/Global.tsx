@@ -80,24 +80,19 @@ export const globalStyles = globalCss({
   a: { textDecoration: "none" },
 });
 
-export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
+export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
+
   const theme = createTheme({
     colors: {
       brand1: "#623CEA",
       brand2: "#311E75",
-      brand3: "#50CF9A",
-      brand4: "#E5F8F0",
-      brand5: "#FF577F",
-      brand6: "#F8E5F3",
-      brand7: "#506CCF",
-      brand8: "#E5E9F8",
 
-      grey0: "#0A0A0B",
-      grey1: "#121214",
-      grey2: "#868E96",
-      grey3: "#E9ECEF",
-      grey4: "#F8F9FA",
-      grey5: "#F8F9FA",
+      grey0: "#f8f9fa",
+      grey1: "#f1f3f5",
+      grey2: "#495057",
+      grey3: "#343a40",
+      grey4: "#212529",
+      grey5: "#0A0A0B",
 
       socialInstagram: "#CF50AC",
       socialFacebook: "#506CCF",
@@ -117,7 +112,7 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       4: "3rem",
       5: "4rem",
       section: "10rem",
-      sectionMobile: "4rem"
+      sectionMobile: "4rem",
     },
     fonts: {
       titles: '"IBM Plex Sans", sans-serif;',
