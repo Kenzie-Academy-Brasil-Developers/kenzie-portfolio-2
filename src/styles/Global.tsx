@@ -87,12 +87,12 @@ export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
       brand1: "#623CEA",
       brand2: "#311E75",
 
-      grey0: "#f8f9fa",
-      grey1: "#f1f3f5",
-      grey2: "#495057",
-      grey3: "#343a40",
-      grey4: "#212529",
-      grey5: "#0A0A0B",
+      grey0: "#0A0A0B",
+      grey1: "#121214",
+      grey2: "#868E96",
+      grey3: "#E9ECEF",
+      grey4: "#F8F9FA",
+      grey5: "#F8F9FA",
 
       socialInstagram: "#CF50AC",
       socialFacebook: "#506CCF",
